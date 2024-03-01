@@ -8,7 +8,7 @@
   <input type="submit" value="Submit">
 </form>
 <script src="script.js">
-  document.getElementById("commentForm").addEventListener("submit", function(event) {
+document.getElementById("commentForm").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent form submission
   var email = document.getElementById("email").value;
   var comment = document.getElementById("comment").value;
@@ -18,6 +18,10 @@
     return;
   }
   // Perform other validation, e.g., validate email format
+  if (email.trim().toLowerCase() == 'zacharia.chemoiywo@mpesafoundationacademy.ac.ke') {
+    alert("You have been caught deceiving!");
+    return;
+  }
   // Submit the form data to a server or perform desired actions
   // For simplicity, we'll just log the form data to the console
   console.log("Email: " + email);
